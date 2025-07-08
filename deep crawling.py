@@ -47,6 +47,10 @@ async def main():
         scan_full_page=True,
         wait_for_images=True,
         pdf=True
+        # --- NEW: Added timeouts to allow more time for page and image loading ---
+        #wait_for_images_timeout=15000, # Increased timeout to 15 seconds (default is usually 5s)
+        #page_load_timeout=30000        # Increased page load timeout to 30 seconds (default is usually 15s)
+
     )
 
     screenshot_files = [] # List to store paths of saved screenshots for PDF creation
